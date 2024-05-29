@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.c-green{
+    color: green;
+}
+body{
+    width: 100vw !important;
+    height: 100vh;
+    background: url('../assets/imgs/tatoo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+
+    .form-container{
+        overflow-y: scroll;
+        height: 95%;
+
+        form{
+            width: 80%;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+        
+            h1{
+                text-align: center;
+            }
+        
+            p{
+                margin: 10px 0;
+            }
+        
+            .form-check-input {
+                width: 20px;
+                height: 20px;
+                
+            }
+            .form-check-label {
+                font-size: 1.25rem; /* Aumenta o tamanho da fonte do rótulo */
+            }
+            button{
+                background: green;
+                font-weight: 600;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                margin-top: 10px;
+                color: white;
+                width: 100%;
+            }
+        }
+
+    }
+
+    .loading{
+        background-color: rgba($color: #f3f3f3, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calculado{
+        display: none ;
+        background: white;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+
+        margin: 0 auto;
+        padding-top: 30px;
+        margin-top: 100px;
+    }
+    .info{
+        padding-bottom: 30px;
+    }
+    .info a{
+        display: block;
+        font-size: 1.1rem;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        background: green;
+        color: white;
+        text-decoration: none;
+        img{
+            width: 40px;
+        }
+    }
+
+
+}
+
