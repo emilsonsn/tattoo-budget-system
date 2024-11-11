@@ -81,89 +81,45 @@
                 </div>
             </div>
             <hr>
-            <h3 class="mt-2">Procedimentos</h3>
-            <strong>Já realizou algum desses procedimentos?</strong>
-            <div class="col-12 row">
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Botox
-                    </label>
-                </div>
-
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        Luz pulsada
-                    </label>
-                </div>
-                
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                    <label class="form-check-label" for="defaultCheck3">
-                        Peeling
-                    </label>
-                </div>
-
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                    <label class="form-check-label" for="defaultCheck4">
-                        Depilação
-                    </label>
-                </div>
-
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                    <label class="form-check-label" for="defaultCheck5">
-                        Remoção de tatuagem
-                    </label>
-                </div>
-
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-                    <label class="form-check-label" for="defaultCheck6">
-                        Nenhuma das anteriores
-                    </label>
-                </div>
-            </div>
+        
 
             <hr>
-            <h3 class="mt-2">Alguma informação importante?</h3>
+            <h3 class="mt-2">Informações adicionais?</h3>
             <strong>Tem algum desses?</strong>
             <div class="col-12 row">
                 <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
-                    <label class="form-check-label" for="defaultCheck7">
-                        Cicatriz
-                    </label>
-                </div>
-
-                <div class="col-md-6">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
-                    <label class="form-check-label" for="defaultCheck8">
-                        Alguma problema de pele
-                    </label>
-                </div>
-
-                <div class="col-md-6">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
                     <label class="form-check-label" for="defaultCheck10">
-                        Alergia
+                        Possui cicatrizes
                     </label>
                 </div>
 
                 <div class="col-md-6">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                    <label class="form-check-label" for="defaultCheck7">
+                        Já teve retoque? 
+                    </label>
+                </div>
+     
+                <div class="col-md-6 mt-3">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
                     <label class="form-check-label" for="defaultCheck11">
-                        Lactante ou grávida
+                        Tatuagem profissional
                     </label>
                 </div>
                 
                 <div class="col-md-6">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
                     <label class="form-check-label" for="defaultCheck12">
-                        Tatuagem
+                        Tatuagem Amadora
                     </label>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="" for="defaultCheck8">
+                    Quanto tempo tem a tatuagem
+                    </label>
+                    <input class="form-control" type="text" value="" id="defaultCheck8">
                 </div>
             </div>
 

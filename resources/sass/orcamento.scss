@@ -9,7 +9,7 @@
 body{
     width: 100vw !important;
     height: 100vh;
-    background: url('../assets/imgs/tatoo.webp');
+    background: url('https://www.maribranquinho.com.br/orcamento/resources/assets/imgs/tatoo.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,13 +58,14 @@ body{
     }
 
     .loading{
-        background-color: rgba($color: #f3f3f3, $alpha: 0.5);
+        background-color: rgba($color: #000000, $alpha: 1);
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }

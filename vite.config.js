@@ -5,8 +5,12 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/app.scss',
                 'resources/js/app.js',
+
+                'resources/sass/_variables.scss',
+                'resources/sass/app.scss',
+                'resources/sass/home.scss',
+                'resources/sass/orcamento.scss',
             ],
             refresh: true,
         }),

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\OrcamentoExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -25,4 +27,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+ 
+
+    public function export()
+    {
+        return Excel::download(new OrcamentoExport, 'orcamentos.xlsx');
+    }
+
 }

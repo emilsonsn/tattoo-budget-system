@@ -36,3 +36,5 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/tattoo-calc', [TattooController::class, 'calc'])->name('calc');
+Route::get('/orcamentos/export', [HomeController::class, 'export'])->name('orcamentos.export');
+

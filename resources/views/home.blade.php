@@ -42,6 +42,7 @@
                             </div>
                             <div class="col-md-4">
                                 <button class="btn btn-primary">Fitlrar</button>
+                                <a href="{{ route('orcamentos.export') }}" class="btn btn-success">Baixar relatório</a>
                             </div>
                         </form>
                         <h1>Orçamentos Calculados</h1>

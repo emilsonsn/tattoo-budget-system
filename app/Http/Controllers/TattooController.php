@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Orcamento;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class TattooController extends Controller
 {
@@ -32,7 +34,7 @@ class TattooController extends Controller
             $data['cores'] = '';
         }
         
-        $valorInicial = round(sqrt($data['altura']**2 + $data['largura']**2) * 60, 2);
+        $valorInicial = round(sqrt($data['altura']**2 + $data['largura']**2) * 80, 2);
         $adicional = 0;
         
         if($data['cicatriz'] == 'Sim'){
@@ -58,17 +60,37 @@ class TattooController extends Controller
 
         $orcamento = Orcamento::create($data);
 
-        Mail::send('mail.clientMail', ['valor' => $orcamento->valor], function($message) use ($orcamento) {
-            $message->to($orcamento->email);
-            $message->subject('Seu Pré-Orçamento');
-        });
-
-        $tatuadorEmail = 'emilsonsn2@gmail.com';
-        Mail::send('mail.managerMail', ['orcamento' => $orcamento], function($message) use ($tatuadorEmail) {
-            $message->to($tatuadorEmail);
-            $message->subject('Novo Pré-Orçamento Recebido');
-        });
-
+        $clientEmailBody = view('mail.clientMail', ['valor' => $orcamento->valor])->render();
+        $this->sendMailWithPHPMailer($orcamento->email, 'Seu Pré-Orçamento', $clientEmailBody);
+        
+        // Envio de email para o tatuador
+        $tatuadorEmail = 'contato@maribranquinho.com.br';
+        $managerEmailBody = view('mail.managerMail', ['orcamento' => $orcamento])->render();
+        $this->sendMailWithPHPMailer($tatuadorEmail, 'Novo Pré-Orçamento Recebido', $managerEmailBody);
+                
         return redirect()->route('orcamento_calculado')->with(['valor' => $orcamento->valor]);
+    }
+
+    function sendMailWithPHPMailer($to, $subject, $body, $fromEmail = 'contato@maribranquinho.com.br', $fromName = 'Mari Branquinho')
+    {
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'br1014.hostgator.com.br';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'contato@maribranquinho.com.br';
+            $mail->Password = 'Ma290589@';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            $mail->setFrom($fromEmail, $fromName);
+            $mail->addAddress($to);
+
+            $mail->isHTML(true);
+            $mail->Subject = mb_encode_mimeheader($subject, 'UTF-8', 'B');
+            $mail->Body    = $body;
+
+            $mail->send();
+        } catch (Exception $e) {}
     }
 }

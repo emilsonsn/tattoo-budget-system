@@ -11,7 +11,9 @@
 <body>
 
     <div class="loading">
-        <img src="https://media1.giphy.com/media/ehgg71YYchm78RWJ8B/giphy.gif" alt="">
+        {{-- <img src="https://media1.giphy.com/media/ehgg71YYchm78RWJ8B/giphy.gif" alt=""> --}}
+        <img src="./assets/images/logoMari.jpeg" alt="" width="350"> <br>
+        <img src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif" alt="" width="80">
     </div>
 
     <div class="calculado">
